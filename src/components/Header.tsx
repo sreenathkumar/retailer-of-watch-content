@@ -4,8 +4,8 @@ import Menu from './ui/Menu'
 
 export default function Header() {
   return (
-    <header>
-      <div className="container bg-slate-200 py-2 flex justify-between items-center">
+    <header className='w-full'>
+      <div className="container py-2 flex justify-between items-center">
         <div className="logo"><img className='w-12' src={require('../assets/images/logo.png')} alt="logo" /></div>
         <div className="menu">
           <Menu />
