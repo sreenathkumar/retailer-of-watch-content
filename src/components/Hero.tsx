@@ -1,8 +1,35 @@
-import React from 'react'
+import React, { useLayoutEffect } from 'react'
 import '../assets/css/hero.css'
 import HeroCard from './ui/HeroCard'
+import { gsap } from 'gsap';
 
 export default function Hero() {
+  const heroCards = React.useRef(null);
+
+  useLayoutEffect(() => {
+
+    const ctx = gsap.context(() => {
+      // Target the two specific elements we have asigned the animate class
+      gsap.to("#hero-card-1", {
+        y: '360',
+        yoyo: true
+      });
+
+      gsap.to("#hero-card-2", {
+        y: '-360',
+        yoyo: true
+      });
+
+      gsap.to("#hero-card-3", {
+        y: '360',
+        yoYo: false
+      });
+
+    }, heroCards);// <- Scope!
+
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div className='container h-screen w-full bg-slate-200 flex flex-col justify-between'>
       <div className="flex justify-between grow h-full">
@@ -13,19 +40,19 @@ export default function Hero() {
             Watch & Create Content
           </p>
         </div>
-        <div className="w-1/2">
-          <div className="card-container flex items-center justify-center gap-10 h-full -rotate-12">
-            <div className='flex flex-col gap-10'>
+        <div className="w-1/2 overflow-hidden">
+          <div className="card-container flex items-center justify-center gap-10 h-full -rotate-12" ref={heroCards}>
+            <div className='flex flex-col gap-10 origin-center' id='hero-card-1'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
             </div>
-            <div className='flex flex-col gap-10'>
+            <div className='flex flex-col gap-10 origin-center' id='hero-card-2'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
             </div>
-            <div className='flex flex-col gap-10'>
+            <div className='flex flex-col gap-10 origin-center' id='hero-card-3'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
