@@ -9,12 +9,12 @@ interface FeatureBoxProps {
 export default function FeatureBox({ title, description, children }: FeatureBoxProps) {
    return (
       <div className="feature-box flex">
-         <div className="feature-box-icon ">
+         <div className="feature-box-icon">
             {children}
          </div>
          <div className="icon-box-texts">
-            <h2 className='text-gray-400'>{title}</h2>
-            <p className='text-black font-bold'>{description}</p>
+            <h2 className='text-black font-bold'>{title}</h2>
+            <p className='text-gray-400'>{description}</p>
          </div>
       </div>
    )
