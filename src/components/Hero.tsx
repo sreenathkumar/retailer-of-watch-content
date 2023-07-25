@@ -54,11 +54,11 @@ export default function Hero() {
       <div className="flex justify-between grow h-full">
         <div className="hero-texts w-1/2 bg-white flex flex-col justify-center items-start">
           <h1 id='hero-heading-1'>Welcome</h1>
-          <h1 id='hero-heading-2' className='mb-4'>to <span>RLikes</span></h1>
+          <h1 id='hero-heading-2' className='mb-4'>to <span className='text-blue-600'>RLikes</span></h1>
           <p id='hero-des' className='mb-6'>Digital Retailer of Content<br />
             Watch & Create Content
           </p>
-          <a href='/' id='hero-btn' className='p-4 scale-0 rounded-xl inline bg-orange-500 '>Create Account</a>
+          <a href='/' id='hero-btn' className='py-4 px-10 scale-0 rounded-xl inline text-white bg-orange-500 '>Get Started</a>
         </div>
         <div className="card-container relative w-1/2 overflow-hidden">
           <div className="card-wrapper bg-white flex items-center justify-center gap-10 h-full -rotate-6" >
