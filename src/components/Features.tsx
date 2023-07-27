@@ -1,6 +1,7 @@
 import React from 'react'
 import '../assets/css/features.css'
 import FeatureBox from './ui/FeatureBox'
+import CTAButton from './ui/CTAButton'
 
 export default function Features() {
    return (
@@ -20,7 +21,7 @@ export default function Features() {
             </FeatureBox>
          </div>
          <div className='flex justify-center mt-10'>
-            <button className='text-center px-6 rounded-xl py-4 bg-orange-500'><a href='/'>Register Now</a></button>
+            <CTAButton name='Register Now' link='/' />
          </div>
       </div>
    )
