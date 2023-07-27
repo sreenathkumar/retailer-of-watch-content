@@ -10,7 +10,14 @@ export default function Products() {
             <h2 className='text-3xl font-semibold'>available <span className='text-blue-600'>to check</span></h2>
          </div>
          <div className="product-card-container">
-            <ProductItem></ProductItem>
+            <div className="product-row-1">
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+            </div>
+            <div className="product-row-2">
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+            </div>
          </div>
       </div>
    )

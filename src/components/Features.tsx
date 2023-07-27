@@ -4,7 +4,7 @@ import FeatureBox from './ui/FeatureBox'
 
 export default function Features() {
    return (
-      <div className='container px-6 py-32 mx-auto '>
+      <div className='container px-6 py-32 mx-auto'>
          <div className="feature-boxs flex justify-between gap-10">
             <FeatureBox title='Listen audio of top creators' description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
          ">

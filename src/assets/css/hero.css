@@ -4,10 +4,6 @@
    font-family: sans-serif;
 }
 
-.hero-texts h1 span {
-   color: blue;
-}
-
 .card-container::after {
    content: "";
    width: 100%;
