@@ -21,7 +21,7 @@ export default function Features() {
             </FeatureBox>
          </div>
          <div className='flex justify-center mt-10'>
-            <CTAButton name='Register Now' link='/' />
+            <CTAButton id={undefined} name='Register Now' link='/' />
          </div>
       </div>
    )
