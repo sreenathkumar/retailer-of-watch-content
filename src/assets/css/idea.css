@@ -1,0 +1,18 @@
+#idea-section .button-group svg:after {
+   content: "How it works?";
+}
+
+#idea-section .image-container {
+   width: 384px;
+   height: 448px;
+   border-radius: 2.5rem;
+}
+#idea-section .text-container .heading {
+   font-size: 3.5rem;
+   font-weight: 800;
+   font-family: sans-serif;
+}
+#idea-section .icon-list svg {
+   height: 1rem;
+   width: 1rem;
+}
