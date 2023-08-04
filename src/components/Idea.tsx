@@ -2,8 +2,6 @@ import React from 'react'
 import CTAButton from './ui/CTAButton'
 import '../assets/css/idea.css'
 
-
-
 export default function Idea() {
    return (
       <div id="idea-section">
@@ -62,7 +60,30 @@ export default function Idea() {
                      </div>
                   </div>
                </div>
+            </div>
+         </div>
+         <div className='w-full p-6'>
+            <div className="idea-footer flex">
+               <div className="w-1/2 relative"></div>
+               <div className="w-1/2 flex">
+                  <div className="flex items-center gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
+                     <p className='text-gray-400'>Add autdio tracks to your stories</p>
 
+                  </div>
+                  <div className="flex items-center gap-2">
+                     <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
+                     <p className='text-gray-400'>Make money on content</p>
+                  </div>
+                  <div className="flex items-center gap-2">
+
+                     <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
+
+
+                     <p className='text-gray-400'>Control the plot of stories</p>
+
+                  </div>
+               </div>
 
             </div>
          </div>
