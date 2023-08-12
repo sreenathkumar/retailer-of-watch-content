@@ -4,7 +4,7 @@ import CreatorImg from '../assets/images/creator.webp'
 
 export default function Creators() {
   return (
-    <div className='container px-6 mx-auto bg-gray-100 relative'>
+    <div className='container px-6 py-10 mx-auto bg-gray-100 relative'>
       <div className="background absolute top-0 left-0 z-10 w-full h-full">
         <div className="shapes flex justify-around items-center h-full">
           <div className="box-1 w-36 h-36 rounded-3xl bg-gray-200">
