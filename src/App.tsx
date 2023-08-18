@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Idea from './components/Idea';
 import Creators from './components/Creators';
 import Platform from './components/Platform';
+import FavoriteContent from './components/FavoriteContent';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
       <Idea />
       <Creators />
       <Platform />
+      <FavoriteContent />
     </>
   );
 }
