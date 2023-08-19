@@ -7,6 +7,7 @@ import Idea from './components/Idea';
 import Creators from './components/Creators';
 import Platform from './components/Platform';
 import FavoriteContent from './components/FavoriteContent';
+import Testmonial from './components/Testmonial';
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Creators />
       <Platform />
       <FavoriteContent />
+      <Testmonial />
     </>
   );
 }
