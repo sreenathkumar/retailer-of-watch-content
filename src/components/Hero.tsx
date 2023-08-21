@@ -6,8 +6,8 @@ import { gsap } from 'gsap';
 export default function Hero() {
   const hero = React.useRef(null);
 
+  //animation for hero section
   useLayoutEffect(() => {
-
     const ctx = gsap.context(() => {
       // Target the two specific elements we have asigned the animate class
       gsap.to("#hero-card-1", {
