@@ -1,10 +1,10 @@
 .audio-player .play-btn::after{
     content: '';
-    width: 50%;
-    height: 50%;
-    border-radius: 0.75rem;
-    border-top: 1px solid #fff;
-    border-right: 1px solid #fff;
+    width: 60%;
+    height: 70%;
+    border-radius: 2px 11px 2px 0px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
     position: absolute;
     top:0;
     right: 0;
