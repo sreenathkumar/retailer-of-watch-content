@@ -9,6 +9,10 @@ export default function Carousel() {
                 <TestmonialCard />
                 <TestmonialCard />
                 <TestmonialCard />
+                <TestmonialCard />
+                <TestmonialCard />
+                <TestmonialCard />
+                <TestmonialCard />
             </div>
         </div>
     )

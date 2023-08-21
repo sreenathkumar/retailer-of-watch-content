@@ -3,7 +3,7 @@ import Carousel from './ui/Carousel'
 import '../assets/css/testmonial.css'
 
 export default function Testmonial() {
-    const maxScroll = 288;
+    const maxScroll = 288 + 16;
 
     const [scrollableWidth, setScrolllableWidth] = useState(0);
     const [completedScroll, setCompletedScroll] = useState(0);
@@ -23,11 +23,11 @@ export default function Testmonial() {
 
         if (scrollableWidth > 0) {
             if (maxScroll <= scrollableWidth) {
-                carouselInner.current[0].style.transform = `translateX(-${completedScroll + maxScroll}px)`
-                setCompletedScroll((completedScroll - maxScroll));
+                carouselInner.current[0].style.transform = `translateX(-${Math.abs(completedScroll) + maxScroll}px)`
+                setCompletedScroll(completedScroll - maxScroll);
                 setScrolllableWidth(scrollableWidth - maxScroll);
             } else {
-                carouselInner.current[0].style.transform = `translateX(-${completedScroll + scrollableWidth}px)`
+                carouselInner.current[0].style.transform = `translateX(-${Math.abs(completedScroll) + scrollableWidth}px)`
                 setCompletedScroll(completedScroll + scrollableWidth);
                 setScrolllableWidth(0);
             }
@@ -44,10 +44,9 @@ export default function Testmonial() {
                 setScrolllableWidth(scrollableWidth + maxScroll);
 
             } else {
-                carouselInner.current[0].style.transform = `translateX(${completedScroll}px)`
-                setScrolllableWidth(scrollableWidth + completedScroll);
+                carouselInner.current[0].style.transform = `translateX(${0}px)`
+                setScrolllableWidth(scrollableWidth + Math.abs(completedScroll));
                 setCompletedScroll(0);
-                console.log('no block');
             }
         } else {
             alert('end of scroll');
