@@ -3,7 +3,7 @@ import Carousel from './ui/Carousel'
 import '../assets/css/testmonial.css'
 
 export default function Testmonial() {
-    const maxScroll = 300;
+    const maxScroll = 288;
 
     const [scrollableWidth, setScrolllableWidth] = useState(0);
     const [completedScroll, setCompletedScroll] = useState(0);
@@ -22,9 +22,9 @@ export default function Testmonial() {
     const forward = () => {
 
         if (scrollableWidth > 0) {
-            if (maxScroll < scrollableWidth) {
+            if (maxScroll <= scrollableWidth) {
                 carouselInner.current[0].style.transform = `translateX(-${completedScroll + maxScroll}px)`
-                setCompletedScroll(completedScroll + maxScroll);
+                setCompletedScroll((completedScroll - maxScroll));
                 setScrolllableWidth(scrollableWidth - maxScroll);
             } else {
                 carouselInner.current[0].style.transform = `translateX(-${completedScroll + scrollableWidth}px)`
@@ -37,8 +37,24 @@ export default function Testmonial() {
     }
 
     const backward = () => {
+        if (completedScroll < 0) {
+            if (maxScroll <= Math.abs(completedScroll)) {
+                carouselInner.current[0].style.transform = `translateX(${completedScroll + maxScroll}px)`
+                setCompletedScroll(completedScroll + maxScroll);
+                setScrolllableWidth(scrollableWidth + maxScroll);
+
+            } else {
+                carouselInner.current[0].style.transform = `translateX(${completedScroll}px)`
+                setScrolllableWidth(scrollableWidth + completedScroll);
+                setCompletedScroll(0);
+                console.log('no block');
+            }
+        } else {
+            alert('end of scroll');
+        }
 
     }
+
     return (
         <div className='container py-32 px-6 mx-auto'>
             <div className='flex justify-between items-center max-w-xl mx-auto mb-10'>
