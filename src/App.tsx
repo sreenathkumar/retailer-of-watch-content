@@ -8,6 +8,7 @@ import Creators from './components/Creators';
 import Platform from './components/Platform';
 import FavoriteContent from './components/FavoriteContent';
 import Testmonial from './components/Testmonial';
+import Footer from './components/Footer';
 
 function App() {
 
@@ -22,6 +23,7 @@ function App() {
       <Platform />
       <FavoriteContent />
       <Testmonial />
+      <Footer />
     </>
   );
 }
