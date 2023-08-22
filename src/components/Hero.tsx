@@ -50,7 +50,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <div className='container relative h-screen overflow-hidden w-full mx-auto px-6 flex flex-col justify-between' ref={hero}>
+    <div className='hero container relative h-screen overflow-hidden w-full mx-auto px-6 flex flex-col justify-between' ref={hero}>
       <div className="flex justify-between grow h-full">
         <div className="hero-texts w-1/2 bg-white flex flex-col justify-center items-start">
           <h1 id='hero-heading-1'>Welcome</h1>
