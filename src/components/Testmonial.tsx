@@ -55,7 +55,7 @@ export default function Testmonial() {
     }
 
     return (
-        <div className='container py-32 px-6 mx-auto'>
+        <div className='container py-24 px-6 mx-auto'>
             <div className='flex justify-between items-center max-w-xl mx-auto mb-10'>
                 <div>
                     <h2 className='text-3xl font-bold'>What our users</h2>
