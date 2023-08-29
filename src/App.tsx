@@ -9,6 +9,7 @@ import Platform from './components/Platform';
 import FavoriteContent from './components/FavoriteContent';
 import Testmonial from './components/Testmonial';
 import Footer from './components/Footer';
+import AnimatedSvg from './components/ui/AnimatedSvg';
 
 function App() {
 
@@ -24,6 +25,7 @@ function App() {
       <FavoriteContent />
       <Testmonial />
       <Footer />
+      <AnimatedSvg duration={3} numberOfCircles={15} />
     </>
   );
 }

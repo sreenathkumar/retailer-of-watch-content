@@ -4,9 +4,9 @@ import '../assets/css/idea.css'
 
 export default function Idea() {
    return (
-      <div id="idea-section">
-         <div className='pt-32 pb-10 bg-gray-200 w-full p-6'>
-            <div className="container idea-wrapper flex">
+      <div id="idea-section" className='container mx-auto'>
+         <div className='container pt-32 pb-10 bg-gray-200 w-full p-6'>
+            <div className="idea-wrapper flex">
                <div className='w-1/2 relative'>
                   <div className="image-wrapper absolute">
                      <div className="image-container relative bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${require('../assets/images/frame_bg.webp')})` }}>
