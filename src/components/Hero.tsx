@@ -12,17 +12,22 @@ export default function Hero() {
       // Target the two specific elements we have asigned the animate class
       gsap.to("#hero-card-1", {
         y: '360',
+        gap: 20,
         duration: 2,
+        ease: 'power4.out'
       });
 
       gsap.to("#hero-card-2", {
         y: '-360',
-        duration: 1,
+        gap: 24,
+        duration: 2,
       });
 
       gsap.to("#hero-card-3", {
         y: '360',
+        gap: 20,
         duration: 2,
+
       });
 
       gsap.to("#hero-btn", {
@@ -44,6 +49,14 @@ export default function Hero() {
         duration: 2,
         opacity: 0,
       });
+      gsap.from("#hero-bottom .icon-box", {
+        y: 90,
+        opacity: 0,
+        duration: 2,
+        stagger: 0.5,
+      });
+
+
     }, hero);// <- Scope!
 
     return () => ctx.revert();
@@ -62,17 +75,17 @@ export default function Hero() {
         </div>
         <div className="card-container relative w-1/2 overflow-hidden">
           <div className="card-wrapper bg-white flex items-center justify-center gap-10 h-full -rotate-6" >
-            <div className='flex flex-col gap-10 origin-center' id='hero-card-1'>
+            <div className='flex flex-col gap-14 origin-center' id='hero-card-1'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
             </div>
-            <div className='flex flex-col gap-10 origin-center' id='hero-card-2'>
+            <div className='flex flex-col gap-14 origin-center' id='hero-card-2'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
             </div>
-            <div className='flex flex-col gap-10 origin-center' id='hero-card-3'>
+            <div className='flex flex-col gap-14 origin-center' id='hero-card-3'>
               {
                 [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
               }
@@ -80,7 +93,7 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div className="hero-bottom flex flex-wrap justify-between absolute px-6 bottom-14 left-0 right-0">
+      <div id='hero-bottom' className="hero-bottom flex flex-wrap justify-between absolute px-6 bottom-14 left-0 right-0">
         <div className="icon-box flex">
           <div className="icon-box-icon mr-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29ZM38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46Zm211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205Z" /></svg>
@@ -90,7 +103,7 @@ export default function Hero() {
             <p className='text-black font-bold'>1,000,000</p>
           </div>
         </div>
-        <div className="icon-box-box flex">
+        <div className="icon-box flex">
           <div className="icon-box-icon mr-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M227.19 104.48A16 16 0 0 0 240 88.81V64a16 16 0 0 0-16-16H32a16 16 0 0 0-16 16v24.81a16 16 0 0 0 12.81 15.67a24 24 0 0 1 0 47A16 16 0 0 0 16 167.19V192a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16v-24.81a16 16 0 0 0-12.81-15.67a24 24 0 0 1 0-47ZM32 167.2a40 40 0 0 0 0-78.39V64h56v128H32Zm192 0V192H104V64h120v24.8a40 40 0 0 0 0 78.39Z" /></svg>
           </div>
@@ -99,7 +112,7 @@ export default function Hero() {
             <p className='text-gray-400'>1,000+ available</p>
           </div>
         </div>
-        <div className="icon-box-box flex">
+        <div className="icon-box flex">
           <div className="icon-box-icon mr-4">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72Z" /></svg>
           </div>
