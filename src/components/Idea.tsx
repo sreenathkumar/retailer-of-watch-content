@@ -1,10 +1,10 @@
-import React from 'react'
-import CTAButton from './ui/CTAButton'
-import '../assets/css/idea.css'
+import '../assets/css/idea.css';
+import CTAButton from './ui/CTAButton';
 
 export default function Idea() {
+
    return (
-      <div id="idea-section" className='container mx-auto'>
+      <div id="idea-section" className='container mx-auto' >
          <div className='container pt-32 pb-10 bg-gray-200 w-full p-6'>
             <div className="idea-wrapper flex">
                <div className='w-1/2 relative'>

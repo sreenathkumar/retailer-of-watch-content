@@ -36,7 +36,7 @@ export default function Hero() {
       });
 
       gsap.from("#hero-heading-1", {
-        y: 40,
+        y: 50,
         duration: 2,
       });
 
@@ -49,14 +49,14 @@ export default function Hero() {
         duration: 2,
         opacity: 0,
       });
+
+      //hero bottom anitmation
       gsap.from("#hero-bottom .icon-box", {
         y: 90,
         opacity: 0,
         duration: 2,
         stagger: 0.5,
       });
-
-
     }, hero);// <- Scope!
 
     return () => ctx.revert();
