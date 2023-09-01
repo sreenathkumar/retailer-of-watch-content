@@ -1,20 +1,84 @@
-import React from 'react'
-import '../assets/css/products.css'
-import ProductItem from './ui/ProductItem'
+import { gsap } from 'gsap';
+import { useLayoutEffect, useRef } from 'react';
+import '../assets/css/products.css';
+import ProductItem from './ui/ProductItem';
 
 export default function Products() {
+   const product = useRef(null);
+
+   // UseLayoutEffect to observe the section when it's in the viewport
+   useLayoutEffect(() => {
+      const currentProductRef = product.current;
+
+      const observer = new IntersectionObserver(
+         (entries) => {
+            entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                  if (currentProductRef) {
+
+                     // Create a GSAP context for the section element
+                     gsap.context(() => {
+                        // Run GSAP animations within this context
+                        gsap.from('.product-row-1', {
+                           opacity: 0,
+                           columnGap: 100,
+                           x: 1000,
+                           duration: 2,
+                        });
+                        gsap.from('.product-row-2', {
+                           opacity: 0,
+                           columnGap: 100,
+                           x: -1000,
+                           duration: 2,
+                        });
+                     }, product);
+
+                     observer.unobserve(currentProductRef); // Stop observing once animation is triggered
+                  }
+               }
+            });
+         },
+         {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px', // No margin
+            threshold: 0.1, // When at least 10% of the section is visible
+         }
+      );
+
+      // Observe the section element
+      if (currentProductRef) {
+         observer.observe(currentProductRef);
+      }
+
+      // Cleanup function for when the component unmounts
+      return () => {
+         if (currentProductRef) {
+            observer.unobserve(currentProductRef);
+         }
+      };
+   }, []);
+
+
    return (
-      <div className='container px-6 pb-32 mx-auto'>
-         <div className="products-headings text-center">
+      <div className='container px-6 pb-16 mx-auto' >
+         <div className="products-headings text-center mb-10">
             <h1 className='text-3xl font-semibold'>Over 5000+ products</h1>
             <h2 className='text-3xl font-semibold'>available <span className='text-blue-600'>to check</span></h2>
          </div>
-         <div className="product-card-container flex flex-col gap-4">
+         <div className="product-card-container overflow-hidden flex flex-col gap-4" ref={product}>
             <div className="product-row-1 flex gap-4">
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
                <ProductItem></ProductItem>
                <ProductItem></ProductItem>
             </div>
             <div className="product-row-2 flex gap-4">
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
+               <ProductItem></ProductItem>
                <ProductItem></ProductItem>
                <ProductItem></ProductItem>
             </div>

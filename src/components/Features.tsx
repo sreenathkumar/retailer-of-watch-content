@@ -18,10 +18,9 @@ export default function Features() {
 
                   if (mainEle) {
                      gsap.context(() => {
-                        gsap.from('.feature-box', {
-                           y: 90,
+                        gsap.from('.feature-box, .feature-box h2, .feature-box p', {
+                           y: 40,
                            opacity: 0,
-                           rowGap: 36,
                            duration: 2,
                            stagger: .3
                         })
@@ -46,7 +45,7 @@ export default function Features() {
          {
             root: null, // Use the viewport as the root
             rootMargin: '0px', // No margin
-            threshold: 0.1, // When at least 10% of the section is visible
+            threshold: 0.2, // When at least 10% of the section is visible
          }
       )
 
@@ -64,7 +63,7 @@ export default function Features() {
 
    }, [])
    return (
-      <div id='feature_section' className='container px-6 py-32 mx-auto' ref={feature}>
+      <div id='feature_section' className='container px-6 py-16 mx-auto' ref={feature}>
          <div className="feature-boxs flex justify-between gap-10">
             <FeatureBox title='Listen audio of top creators' description="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
          ">
