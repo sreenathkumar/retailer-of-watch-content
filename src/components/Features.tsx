@@ -15,7 +15,6 @@ export default function Features() {
             entries.forEach((entry) => {
                if (entry.isIntersecting) {
                   // Play the animation when the section is visible
-
                   if (mainEle) {
                      gsap.context(() => {
                         gsap.from('.feature-box, .feature-box h2, .feature-box p', {

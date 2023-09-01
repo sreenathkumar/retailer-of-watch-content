@@ -1,15 +1,109 @@
+import { useRef, useLayoutEffect } from 'react';
 import '../assets/css/idea.css';
 import CTAButton from './ui/CTAButton';
+import { gsap } from 'gsap';
+
 
 export default function Idea() {
+   const idea = useRef(null);
+
+
+   // UseLayoutEffect to observe the section when it's in the viewport
+   useLayoutEffect(() => {
+      const currentIdeaRef = idea.current;
+
+      const observer = new IntersectionObserver(
+         (entries) => {
+            entries.forEach((entry) => {
+               if (entry.isIntersecting) {
+                  if (currentIdeaRef) {
+
+                     // Create a GSAP context for the section element
+                     gsap.context(() => {
+                        // Run GSAP animations within this context
+                        gsap.from('.image-wrapper .image-container', {
+                           width: 30,
+                           height: 30,
+                           duration: 2,
+                        });
+                     }, idea);
+
+                     gsap.from('.question', {
+                        opacity: 0,
+                        scale: 0,
+                        duration: 2,
+                        delay: 1.5,
+                     })
+                     gsap.from('.result', {
+                        opacity: 0,
+                        scale: 0,
+                        duration: 2,
+                        delay: 2.1,
+                     })
+                     gsap.from('.timeline', {
+                        opacity: 0,
+                        duration: 2,
+                        delay: 1.5,
+                     })
+
+                     gsap.from('#idea-btn, .idea-play-btn-group svg', {
+                        scale: 0,
+                        opacity: 0,
+                        duration: 2,
+                        stagger: 2
+                     })
+                     gsap.from('.idea-play-btn-group span', {
+                        x: -48,
+                        opacity: 0,
+                        duration: 2,
+                        delay: 2,
+                        stagger: 2,
+                     })
+                     gsap.from('.idea-list-item', {
+                        y: 90,
+                        opacity: 0,
+                        duration: 2,
+                        stagger: 0.3
+                     })
+                     gsap.from('.image-container .play-button', {
+                        rotate: -30,
+                        duration: 2,
+                     })
+
+                     observer.unobserve(currentIdeaRef); // Stop observing once animation is triggered
+                  }
+               }
+            });
+         },
+         {
+            root: null, // Use the viewport as the root
+            rootMargin: '0px', // No margin
+            threshold: .6, // When at least 10% of the section is visible
+         }
+      );
+
+      // Observe the section element
+      if (currentIdeaRef) {
+         observer.observe(currentIdeaRef);
+      }
+
+      // Cleanup function for when the component unmounts
+      return () => {
+         if (currentIdeaRef) {
+            observer.unobserve(currentIdeaRef);
+         }
+      };
+   }, []);
+
+
 
    return (
-      <div id="idea-section" className='container mx-auto' >
+      <div id="idea-section" className='container mx-auto' ref={idea}>
          <div className='container pt-32 pb-10 bg-gray-200 w-full p-6'>
             <div className="idea-wrapper flex">
                <div className='w-1/2 relative'>
                   <div className="image-wrapper absolute">
-                     <div className="image-container relative bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${require('../assets/images/frame_bg.webp')})` }}>
+                     <div className="image-container origin-bottom-left relative left-0 bottom-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${require('../assets/images/frame_bg.webp')})` }}>
                         <div className="play-button absolute top-4 -right-6">
                            <svg className='w-6 h-6 p-4 border text-white 
                          bg-orange-500 rounded-2xl border-none box-content' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z" />
@@ -51,8 +145,8 @@ export default function Idea() {
                         <p className="description text-gray-400 mb-6 max-w-lg">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non quis quam saepe deserunt iusto voluptate nulla omnis minima beatae vitae.</p>
                      </div>
                      <div className="button-group flex items-center gap-4">
-                        <CTAButton id={undefined} name='Get Started' link='/' />
-                        <div className='flex items-center gap-4'>
+                        <CTAButton id={'idea-btn'} name='Get Started' link='/' />
+                        <div className='idea-play-btn-group flex items-center gap-4'>
                            <svg className='w-6 h-6 p-2 border text-gray-400
                         border-gray-400 rounded-xl box-content' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z" /></svg>
                            <span className='text-gray-400'>How does it works?</span>
@@ -66,15 +160,15 @@ export default function Idea() {
             <div className="container idea-footer flex">
                <div className="w-1/2 relative"></div>
                <div className="w-1/2 flex">
-                  <div className="flex items-center gap-2">
+                  <div className="idea-list-item flex items-center gap-2">
                      <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
                      <p className='text-gray-400 text-sm'>Add autdio tracks to your stories</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="idea-list-item flex items-center gap-2">
                      <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
                      <p className='text-gray-400 text-sm'>Make money on content</p>
                   </div>
-                  <div className="flex items-center gap-2">
+                  <div className="idea-list-item flex items-center gap-2">
                      <svg xmlns="http://www.w3.org/2000/svg" className='w-4 h-4 bg-gray-400 box-content p-4 rounded-full' viewBox="0 0 256 256"><path fill="currentColor" d="m209.72 58.25l-80-24A6 6 0 0 0 122 40v113.05A46 46 0 1 0 134 184V96.06l72.28 21.69A6 6 0 0 0 214 112V64a6 6 0 0 0-4.28-5.75ZM88 218a34 34 0 1 1 34-34a34 34 0 0 1-34 34Zm114-114.06l-68-20.4V48.06l68 20.4Z" /></svg>
                      <p className='text-gray-400 text-sm'>Control the plot of stories</p>
                   </div>
