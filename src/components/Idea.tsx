@@ -26,49 +26,52 @@ export default function Idea() {
                            height: 30,
                            duration: 2,
                         });
+                        gsap.from('.icon-list', {
+                           opacity: 0,
+                           duration: 2,
+                        })
+                        gsap.from('.question', {
+                           opacity: 0,
+                           scale: 0,
+                           duration: 2,
+                           delay: 1.5,
+                        })
+                        gsap.from('.result', {
+                           opacity: 0,
+                           scale: 0,
+                           duration: 2,
+                           delay: 2.1,
+                        })
+                        gsap.from('.timeline', {
+                           opacity: 0,
+                           duration: 2,
+                           delay: 1.5,
+                        })
+
+                        gsap.from('#idea-btn, .idea-play-btn-group svg', {
+                           scale: 0,
+                           opacity: 0,
+                           duration: 2,
+                           stagger: 2
+                        })
+                        gsap.from('.idea-play-btn-group span', {
+                           x: -48,
+                           opacity: 0,
+                           duration: 2,
+                           delay: 2,
+                           stagger: 2,
+                        })
+                        gsap.from('.idea-list-item', {
+                           y: 90,
+                           opacity: 0,
+                           duration: 2,
+                           stagger: 0.3
+                        })
+                        gsap.from('.image-container .play-button', {
+                           rotate: -30,
+                           duration: 2,
+                        })
                      }, idea);
-
-                     gsap.from('.question', {
-                        opacity: 0,
-                        scale: 0,
-                        duration: 2,
-                        delay: 1.5,
-                     })
-                     gsap.from('.result', {
-                        opacity: 0,
-                        scale: 0,
-                        duration: 2,
-                        delay: 2.1,
-                     })
-                     gsap.from('.timeline', {
-                        opacity: 0,
-                        duration: 2,
-                        delay: 1.5,
-                     })
-
-                     gsap.from('#idea-btn, .idea-play-btn-group svg', {
-                        scale: 0,
-                        opacity: 0,
-                        duration: 2,
-                        stagger: 2
-                     })
-                     gsap.from('.idea-play-btn-group span', {
-                        x: -48,
-                        opacity: 0,
-                        duration: 2,
-                        delay: 2,
-                        stagger: 2,
-                     })
-                     gsap.from('.idea-list-item', {
-                        y: 90,
-                        opacity: 0,
-                        duration: 2,
-                        stagger: 0.3
-                     })
-                     gsap.from('.image-container .play-button', {
-                        rotate: -30,
-                        duration: 2,
-                     })
 
                      observer.unobserve(currentIdeaRef); // Stop observing once animation is triggered
                   }
@@ -101,9 +104,9 @@ export default function Idea() {
       <div id="idea-section" className='container mx-auto' ref={idea}>
          <div className='container pt-32 pb-10 bg-gray-200 w-full p-6'>
             <div className="idea-wrapper flex">
-               <div className='w-1/2 relative'>
-                  <div className="image-wrapper absolute">
-                     <div className="image-container origin-bottom-left relative left-0 bottom-0 bg-center bg-no-repeat bg-cover" style={{ backgroundImage: `url(${require('../assets/images/frame_bg.webp')})` }}>
+               <div className='w-1/2 flex items-center justify-center relative'>
+                  <div className="image-wrapper text-center absolute">
+                     <div className="image-container bg-left-bottom relative left-0 bottom-0 bg-no-repeat bg-cover" style={{ backgroundImage: `url(${require('../assets/images/frame_bg.webp')})` }}>
                         <div className="play-button absolute top-4 -right-6">
                            <svg className='w-6 h-6 p-4 border text-white 
                          bg-orange-500 rounded-2xl border-none box-content' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M240 128a15.74 15.74 0 0 1-7.6 13.51L88.32 229.65a16 16 0 0 1-16.2.3A15.86 15.86 0 0 1 64 216.13V39.87a15.86 15.86 0 0 1 8.12-13.82a16 16 0 0 1 16.2.3l144.08 88.14A15.74 15.74 0 0 1 240 128Z" />
