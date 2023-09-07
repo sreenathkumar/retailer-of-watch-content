@@ -1,3 +1,30 @@
-.animated-bg svg{
-    width: 448px;
+
+#bg-svg .bg-svg-cls-1,.wave{
+    fill:none;
+    stroke:#b3b3b3;
+    stroke-miterlimit:5;
+    stroke-width:  1px ;
+}
+#bg-svg .circle-2{fill:#1d4ed8 !important}
+#bg-svg .circle-3{fill:#0ea5e9;}
+#bg-svg .circle-4{fill:#6d28d9;}
+#bg-svg .circle-5{fill:#f97316;}
+#bg-svg .circle-6{fill:#ea580c;}
+
+#wave {
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    animation: wave 10s linear infinite;
+}
+
+@keyframes wave {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(50%);
+    }
 }
