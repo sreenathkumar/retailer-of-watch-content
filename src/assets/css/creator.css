@@ -11,14 +11,19 @@
 #bg-svg .circle-5{fill:#f97316;}
 #bg-svg .circle-6{fill:#ea580c;}
 
+#creator-1{
+    transform-origin: center;
+}
+
 #wave {
     width: 200%;
     position: absolute;
     top: 50%;
     right: 0%;
     transform: translate(0%, -50%);
-    animation: wave 10s linear infinite;
+    animation: wave 9s linear infinite;
 }
+
 
 @keyframes wave {
     0% {
