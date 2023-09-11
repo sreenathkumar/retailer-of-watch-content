@@ -91,6 +91,41 @@ export default function Creators() {
                   yoyo: true,
                   ease: 'none'
                 })
+                gsap.from(['#creator-3', '#creator-4'], {
+                  x: 100,
+                  opacity: 0,
+                  duration: 3,
+                })
+                gsap.fromTo('#creator-3', {
+                  rotate: 20,
+                  y: -16,
+                  duration: 3,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: 'none'
+                }, {
+                  rotate: -20,
+                  y: -96,
+                  duration: 3,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: 'none'
+                })
+                gsap.fromTo('#creator-4', {
+                  rotate: -20,
+                  y: -96,
+                  duration: 3,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: 'none'
+                }, {
+                  rotate: 20,
+                  y: -16,
+                  duration: 3,
+                  repeat: -1,
+                  yoyo: true,
+                  ease: 'none'
+                })
 
               }, creator)
 
@@ -126,7 +161,7 @@ export default function Creators() {
 
         <div className="shapes flex justify-around items-center h-full">
           <div className="animated-bg overflow-hidden relative box-1 w-36 h-36 rounded-3xl bg-gray-200">
-            {<AnimatedSvg duration={3} numberOfCircles={10} width={288} strokeWidth={4} />}
+            {<AnimatedSvg duration={3} numberOfCircles={10} width={288} strokeWidth={4} strokeColorClassName='stroke-white' />}
           </div>
           <div className="animated-bg overflow-hidden relative box-2 w-56 h-56 rounded-3xl bg-red-100">
             {<AnimatedSvg duration={3} numberOfCircles={15} width={448} strokeWidth={4} />}
@@ -137,7 +172,7 @@ export default function Creators() {
         </div>
       </div>
       <div className="contents">
-        <div className='flex flex-col items-center z-20 relative'>
+        <div className='flex flex-col items-center z-20 mb-24 -translate-y-10 relative'>
           <span className='text-3xl font-semibold'>Enjoy listening to endless</span>
           <span className='text-3xl font-semibold mb-10'>stories with your creators</span>
         </div>
