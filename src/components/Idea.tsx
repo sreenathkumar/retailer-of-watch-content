@@ -98,8 +98,6 @@ export default function Idea() {
       };
    }, []);
 
-
-
    return (
       <div id="idea-section" className='container mx-auto' ref={idea}>
          <div className='container pt-32 pb-10 bg-gray-200 w-full p-6'>
