@@ -9,3 +9,8 @@
     top:0;
     right: 0;
 }
+.fav-pos{
+    top: 0;
+    transform-origin: center;
+    transform: translate(-50%, -50%);
+}
