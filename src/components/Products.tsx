@@ -24,12 +24,26 @@ export default function Products() {
                            columnGap: 100,
                            x: 1000,
                            duration: 2,
+                           scrollTrigger: {
+                              trigger: document.querySelector('#product-section'),
+                              endTrigger: document.querySelector('.product-row-1'),
+                              start: 'top 70%',
+                              end: 'top 13%',
+                              toggleActions: 'restart reverse restart none'
+                           }
                         });
                         gsap.from('.product-row-2', {
                            opacity: 0,
                            columnGap: 100,
                            x: -1000,
                            duration: 2,
+                           scrollTrigger: {
+                              trigger: document.querySelector('#product-section'),
+                              endTrigger: document.querySelector('.product-row-1'),
+                              start: 'top 70%',
+                              end: 'top 13%',
+                              toggleActions: 'restart reverse restart none'
+                           }
                         });
                      }, product);
 
@@ -60,7 +74,7 @@ export default function Products() {
 
 
    return (
-      <div className='container px-6 pb-16 mx-auto' >
+      <div id='product-section' className='container px-6 pb-16 mx-auto' >
          <div className="products-headings text-center mb-10">
             <h1 className='text-3xl font-semibold'>Over 5000+ products</h1>
             <h2 className='text-3xl font-semibold'>available <span className='text-blue-600'>to check</span></h2>
