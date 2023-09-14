@@ -3,7 +3,7 @@ import AuthorImage from '../../assets/images/creator.webp'
 
 export default function TestmonialCard() {
     return (
-        <div className='flex flex-col rounded-md px-6 py-10 border-2 border-gray-400' style={{ minWidth: '288px' }} >
+        <div className='testmonial-card flex flex-col rounded-md px-6 py-10 border-2 border-gray-400' style={{ minWidth: '288px' }} >
             <div className='flex gap-2 mb-4'>
                 <img className='w-12 h-12 rounded-full' src={AuthorImage} alt="client_avatar" />
                 <div className='flex flex-col'>
