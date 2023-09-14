@@ -2,61 +2,60 @@ import React, { useLayoutEffect } from 'react'
 import '../assets/css/hero.css'
 import HeroCard from './ui/HeroCard'
 import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { getRandomInt } from '../utils/getRandomNumber';
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Hero() {
   const hero = React.useRef(null);
 
-  //animation for hero section
+
+  //animations for hero section
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      // Target the two specific elements we have asigned the animate class
-      gsap.to("#hero-card-1", {
-        y: '360',
-        gap: 20,
+      //1st column card animation
+      gsap.to("#hero-card-1", { y: '360', gap: 20, duration: 2, ease: 'power4.out' });
+      gsap.to('#hero-card-1', {
+        scrollTrigger: {
+          trigger: document.querySelector("#feature_section"),
+          start: "top bottom",
+          end: "top top",
+        },
+        y: '-360',
         duration: 2,
         ease: 'power4.out'
       });
 
-      gsap.to("#hero-card-2", {
-        y: '-360',
-        gap: 24,
-        duration: 2,
-      });
-
-      gsap.to("#hero-card-3", {
+      //2nd column card animation
+      gsap.to("#hero-card-2", { y: '-360', gap: 20, duration: 2, });
+      gsap.to('#hero-card-2', {
+        scrollTrigger: {
+          trigger: document.querySelector("#feature_section"),
+          start: "top bottom",
+          end: "top top",
+        },
         y: '360',
-        gap: 20,
         duration: 2,
-
+        ease: 'power4.out'
       });
 
-      gsap.to("#hero-btn", {
-        scale: 1,
+      //3rd column card animation
+      gsap.to("#hero-card-3", { y: '360', gap: 20, duration: 2 });
+      gsap.to('#hero-card-3', {
+        scrollTrigger: {
+          trigger: document.querySelector("#feature_section"),
+          start: "top bottom",
+          end: "top top",
+        },
+        y: '-360',
         duration: 2,
+        ease: 'power4.out'
       });
-
-      gsap.from("#hero-heading-1", {
-        y: 50,
-        duration: 2,
-      });
-
-      gsap.from("#hero-heading-2", {
-        y: 50,
-        duration: 2,
-        opacity: 0,
-      });
-      gsap.from("#hero-des", {
-        duration: 2,
-        opacity: 0,
-      });
-
-      //hero bottom anitmation
-      gsap.from("#hero-bottom .icon-box", {
-        y: 90,
-        opacity: 0,
-        duration: 2,
-        stagger: 0.5,
-      });
+      gsap.to("#hero-btn", { scale: 1, duration: 2, }); //hero button animation
+      gsap.from("#hero-heading-1", { y: 50, duration: 2, }); //hero heading 1 animation
+      gsap.from("#hero-heading-2", { y: 50, duration: 2, opacity: 0 }); //hero heading 2 animation
+      gsap.from("#hero-des", { duration: 2, opacity: 0, }); //hero description animation
+      gsap.from("#hero-bottom .icon-box", { y: 90, opacity: 0, duration: 2, stagger: 0.5, });//hero bottom anitmation
     }, hero);// <- Scope!
 
     return () => ctx.revert();
@@ -77,17 +76,17 @@ export default function Hero() {
           <div className="card-wrapper bg-white flex items-center justify-center gap-10 h-full -rotate-6" >
             <div className='flex flex-col gap-14 origin-center' id='hero-card-1'>
               {
-                [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
+                [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => <HeroCard key={index} img={`img-${getRandomInt(1, 8)}.png`} />)
               }
             </div>
             <div className='flex flex-col gap-14 origin-center' id='hero-card-2'>
               {
-                [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
+                [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => <HeroCard key={index} img={`img-${getRandomInt(1, 8)}.png`} />)
               }
             </div>
             <div className='flex flex-col gap-14 origin-center' id='hero-card-3'>
               {
-                [1, 2, 3, 4, 5].map((item, index) => <HeroCard key={index} />)
+                [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => <HeroCard key={index} img={`img-${getRandomInt(1, 8)}.png`} />)
               }
             </div>
           </div>
