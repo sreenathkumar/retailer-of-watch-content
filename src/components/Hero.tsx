@@ -17,9 +17,10 @@ export default function Hero() {
       gsap.to("#hero-card-1", { y: '360', gap: 20, duration: 2, ease: 'power4.out' });
       gsap.to('#hero-card-1', {
         scrollTrigger: {
-          trigger: document.querySelector("#feature_section"),
-          start: "top bottom",
-          end: "top top",
+          trigger: document.querySelector("#feature-section"),
+          start: "top 70%",
+          end: "top 30%",
+          toggleActions: 'restart reverse restart none',
         },
         y: '-360',
         duration: 2,
@@ -30,9 +31,11 @@ export default function Hero() {
       gsap.to("#hero-card-2", { y: '-360', gap: 20, duration: 2, });
       gsap.to('#hero-card-2', {
         scrollTrigger: {
-          trigger: document.querySelector("#feature_section"),
-          start: "top bottom",
-          end: "top top",
+          trigger: document.querySelector("#feature-section"),
+          start: "top 70%",
+          end: "top 30%",
+          toggleActions: 'restart reverse restart none',
+          markers: true,
         },
         y: '360',
         duration: 2,
@@ -43,9 +46,10 @@ export default function Hero() {
       gsap.to("#hero-card-3", { y: '360', gap: 20, duration: 2 });
       gsap.to('#hero-card-3', {
         scrollTrigger: {
-          trigger: document.querySelector("#feature_section"),
-          start: "top bottom",
-          end: "top top",
+          trigger: document.querySelector("#feature-section"),
+          start: "top 70%",
+          end: "top 30%",
+          toggleActions: 'restart reverse restart none'
         },
         y: '-360',
         duration: 2,
