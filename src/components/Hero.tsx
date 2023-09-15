@@ -35,7 +35,6 @@ export default function Hero() {
           start: "top 70%",
           end: "top 30%",
           toggleActions: 'restart reverse restart none',
-          markers: true,
         },
         y: '360',
         duration: 2,
