@@ -28,7 +28,7 @@ export default function Features() {
                            delay: 0.3,
                            duration: 2
                         })
-                        gsap.from('#feature_section button', {
+                        gsap.from('#feature-section button', {
                            scale: 0,
                            delay: 1,
                            duration: 2
