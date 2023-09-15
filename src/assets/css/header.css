@@ -1,0 +1,27 @@
+.drawer{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.drawer-content{
+    min-width: 328px;
+    width: 50vw;
+    padding: 24px;
+    transition: 0.3s ease-in-out;
+    transform: translateX(100%);
+    position: relative;
+    z-index: 20;
+}
+.drawer-open {
+    transform: translateX(0);
+}
+.drawer-content .close-btn{
+    margin-left: auto;
+    margin-bottom: 40px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+.drawer-content .close-btn:hover{
+    rotate: 90deg;
+    color: red;
+}
