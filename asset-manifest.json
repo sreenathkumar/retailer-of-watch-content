@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/retailer-of-watch-content/static/css/main.babf3ace.css",
+    "main.js": "/retailer-of-watch-content/static/js/main.0d44bb25.js",
+    "static/media/frame_bg.webp": "/retailer-of-watch-content/static/media/frame_bg.2eb887985e84d403fd1c.webp",
+    "static/media/product-card-image.webp": "/retailer-of-watch-content/static/media/product-card-image.69dfae18a45b457ede44.webp",
+    "static/media/img-1.png": "/retailer-of-watch-content/static/media/img-1.b623fd7c00909f65f4a0.png",
+    "static/media/img-5.png": "/retailer-of-watch-content/static/media/img-5.41fb6aa885ea2a934c27.png",
+    "static/media/img-8.png": "/retailer-of-watch-content/static/media/img-8.dd6c982e9a7620c25841.png",
+    "static/media/img-4.png": "/retailer-of-watch-content/static/media/img-4.3340fb8e3c11a822287b.png",
+    "static/media/img-2.png": "/retailer-of-watch-content/static/media/img-2.e3a7799499af33bfc8d0.png",
+    "static/media/img-3.png": "/retailer-of-watch-content/static/media/img-3.2149e7a1b9184b265c34.png",
+    "static/media/img-6.png": "/retailer-of-watch-content/static/media/img-6.39b27d552a516f903a71.png",
+    "static/media/img-7.png": "/retailer-of-watch-content/static/media/img-7.9f20384e3a707be80052.png",
+    "static/media/creator.webp": "/retailer-of-watch-content/static/media/creator.779a6c19b2352ead5247.webp",
+    "static/media/mobile.webp": "/retailer-of-watch-content/static/media/mobile.703265726923c51fd70a.webp",
+    "static/media/team.webp": "/retailer-of-watch-content/static/media/team.2c43cada8ff7d2c8a389.webp",
+    "static/media/video_timeline.webp": "/retailer-of-watch-content/static/media/video_timeline.56bb0e7a499ceef5818e.webp",
+    "static/media/Asset 4.svg": "/retailer-of-watch-content/static/media/Asset 4.50f721299a9607476b97.svg",
+    "index.html": "/retailer-of-watch-content/index.html",
+    "main.babf3ace.css.map": "/retailer-of-watch-content/static/css/main.babf3ace.css.map",
+    "main.0d44bb25.js.map": "/retailer-of-watch-content/static/js/main.0d44bb25.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.babf3ace.css",
+    "static/js/main.0d44bb25.js"
+  ]
+}
