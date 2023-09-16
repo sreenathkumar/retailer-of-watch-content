@@ -1,3 +1,18 @@
 .play-btn .btn {
    transform: translate(-2px, -2px);
 }
+.product-card{
+   min-width: 13rem;
+}
+
+/* hide scrollbar for chrome, safari and opera  */
+.product-card-container::-webkit-scrollbar{
+     display: none; 
+     scroll-behavior: smooth;
+}
+.product-card-container{
+   scrollbar-width: none; /* firefox */
+}
+.product-card-container > *{
+   scroll-snap-align: start;
+}

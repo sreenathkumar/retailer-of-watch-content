@@ -64,6 +64,22 @@ export default function Products() {
          observer.observe(currentProductRef);
       }
 
+      const container = document.querySelector('.product-card-container') as HTMLElement;
+
+      container?.addEventListener('wheel', (e: WheelEvent) => {
+         // Calculate the amount to scroll based on the wheel delta
+         const scrollAmount = e.deltaY * 0.5; // Adjust this multiplier as needed
+
+         // Calculate the new scroll position
+         const newScrollLeft = container.scrollLeft + scrollAmount;
+
+         // Set the new scroll position
+         container.scrollLeft = newScrollLeft;
+
+         // Prevent the default scroll behavior of the page
+         e.preventDefault();
+      });
+
       // Cleanup function for when the component unmounts
       return () => {
          if (currentProductRef) {
@@ -79,7 +95,7 @@ export default function Products() {
             <h1 className='text-3xl font-semibold'>Over 5000+ products</h1>
             <h2 className='text-3xl font-semibold'>available <span className='text-blue-600'>to check</span></h2>
          </div>
-         <div className="product-card-container overflow-hidden flex flex-col gap-4" ref={product}>
+         <div className="product-card-container overflow-x-scroll flex flex-col gap-4" ref={product}>
             <div className="product-row-1 flex gap-4">
                <ProductItem></ProductItem>
                <ProductItem></ProductItem>
