@@ -66,7 +66,7 @@ export default function Hero() {
 
   return (
     <div className='hero container relative h-screen overflow-hidden w-full mx-auto px-6 flex flex-col justify-between' ref={hero}>
-      <div className="flex justify-between grow h-full">
+      <div className="hero-main md:flex md:justify-between md:grow md:h-full">
         <div className="hero-texts w-1/2 bg-white flex flex-col justify-center items-start">
           <h1 id='hero-heading-1'>Welcome</h1>
           <h1 id='hero-heading-2' className='mb-4'>to <span className='text-blue-600'>RLikes</span></h1>
@@ -95,32 +95,34 @@ export default function Hero() {
           </div>
         </div>
       </div>
-      <div id='hero-bottom' className="hero-bottom flex flex-wrap justify-between absolute px-6 bottom-14 left-0 right-0">
-        <div className="icon-box flex">
-          <div className="icon-box-icon mr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29ZM38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46Zm211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205Z" /></svg>
+      <div id='hero-bottom' className="hero-bottom absolute px-6 left-0 right-0">
+        <div className="wrapper flex flex-wrap justify-between gap-6">
+          <div className="icon-box flex">
+            <div className="icon-box-icon mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M112.6 158.43a58 58 0 1 0-57.2 0a93.83 93.83 0 0 0-50.19 38.29a6 6 0 0 0 10.05 6.56a82 82 0 0 1 137.48 0a6 6 0 0 0 10-6.56a93.83 93.83 0 0 0-50.14-38.29ZM38 108a46 46 0 1 1 46 46a46.06 46.06 0 0 1-46-46Zm211 97a6 6 0 0 1-8.3-1.74A81.8 81.8 0 0 0 172 166a6 6 0 0 1 0-12a46 46 0 1 0-17.08-88.73a6 6 0 1 1-4.46-11.14a58 58 0 0 1 50.14 104.3a93.83 93.83 0 0 1 50.19 38.29A6 6 0 0 1 249 205Z" /></svg>
+            </div>
+            <div className="icon-box-texts">
+              <h2 className='text-gray-400'>Users watching</h2>
+              <p className='text-black font-bold'>1,000,000</p>
+            </div>
           </div>
-          <div className="icon-box-texts">
-            <h2 className='text-gray-400'>Users watching</h2>
-            <p className='text-black font-bold'>1,000,000</p>
+          <div className="icon-box flex">
+            <div className="icon-box-icon mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M227.19 104.48A16 16 0 0 0 240 88.81V64a16 16 0 0 0-16-16H32a16 16 0 0 0-16 16v24.81a16 16 0 0 0 12.81 15.67a24 24 0 0 1 0 47A16 16 0 0 0 16 167.19V192a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16v-24.81a16 16 0 0 0-12.81-15.67a24 24 0 0 1 0-47ZM32 167.2a40 40 0 0 0 0-78.39V64h56v128H32Zm192 0V192H104V64h120v24.8a40 40 0 0 0 0 78.39Z" /></svg>
+            </div>
+            <div className="icon-box-texts">
+              <h2 className='text-black font-bold'>Create Content Now</h2>
+              <p className='text-gray-400'>1,000+ available</p>
+            </div>
           </div>
-        </div>
-        <div className="icon-box flex">
-          <div className="icon-box-icon mr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="M227.19 104.48A16 16 0 0 0 240 88.81V64a16 16 0 0 0-16-16H32a16 16 0 0 0-16 16v24.81a16 16 0 0 0 12.81 15.67a24 24 0 0 1 0 47A16 16 0 0 0 16 167.19V192a16 16 0 0 0 16 16h192a16 16 0 0 0 16-16v-24.81a16 16 0 0 0-12.81-15.67a24 24 0 0 1 0-47ZM32 167.2a40 40 0 0 0 0-78.39V64h56v128H32Zm192 0V192H104V64h120v24.8a40 40 0 0 0 0 78.39Z" /></svg>
-          </div>
-          <div className="icon-box-texts">
-            <h2 className='text-black font-bold'>Create Content Now</h2>
-            <p className='text-gray-400'>1,000+ available</p>
-          </div>
-        </div>
-        <div className="icon-box flex">
-          <div className="icon-box-icon mr-4">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72Z" /></svg>
-          </div>
-          <div className="icon-box-texts">
-            <h2 className='text-black font-bold'>Find our best creators</h2>
-            <p className='text-gray-400'>search best audio</p>
+          <div className="icon-box flex">
+            <div className="icon-box-icon mr-4">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256"><path fill="currentColor" d="m229.66 218.34l-50.07-50.06a88.11 88.11 0 1 0-11.31 11.31l50.06 50.07a8 8 0 0 0 11.32-11.32ZM40 112a72 72 0 1 1 72 72a72.08 72.08 0 0 1-72-72Z" /></svg>
+            </div>
+            <div className="icon-box-texts">
+              <h2 className='text-black font-bold'>Find our best creators</h2>
+              <p className='text-gray-400'>search best audio</p>
+            </div>
           </div>
         </div>
       </div>
