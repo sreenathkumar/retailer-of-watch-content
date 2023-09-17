@@ -149,7 +149,7 @@ export default function Creators() {
   }, [])
 
   return (
-    <div className='container px-6 py-10 mx-auto bg-gray-100 py-32 relative overflow-hidden' ref={creator}>
+    <div className='max-w-screen-xl px-6 py-10 mx-auto bg-gray-100 py-32 relative overflow-hidden' ref={creator}>
       <div className="background absolute top-0 left-0 z-10 w-full h-full overflow-hidden">
         <svg id="bg-svg" className='w-full h-full z-9 absolute opacity-.5' xmlns="http://www.w3.org/2000/svg" viewBox="0 0 222 222"><g><g className='origin-center'><circle className="bg-svg-cls-1" cx="111.5" cy="110.5" r="21.5" /><circle className="bg-svg-cls-1" cx="111.33" cy="110.67" r="51" /><circle className="bg-svg-cls-1" cx="111.17" cy="110.83" r="80.5" /><circle className="bg-svg-cls-1" cx="111" cy="111" r="110" /><circle className="cirlce-2" cx="27" cy="40" r="5" /><circle className="circle-3" cx="10" cy="156" r="4.38" /><circle className="circle-3" cx="187" cy="30" r="4" /><circle className="circle-4" cx="192" cy="111" r="5" /><circle className="circle-5" cx="103" cy="60" r="4" /><circle className="circle-6" cx="156" cy="210" r="4" /></g></g></svg>
 
