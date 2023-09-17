@@ -16,7 +16,6 @@ export default function Creators() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             if (currentCratorElement) {
-
               gsap.context(() => {
                 gsap.from('#bg-svg g.origin-center', {
                   scale: 0,
@@ -176,7 +175,7 @@ export default function Creators() {
           <span className='text-3xl font-semibold'>Enjoy listening to endless</span>
           <span className='text-3xl font-semibold mb-10'>stories with your creators</span>
         </div>
-        <div className='flex justify-around z-20 relative'>
+        <div className='flex flex-wrap justify-around z-20 relative'>
           <CreatorCard img={CreatorImg} id={1} name='Creator' />
           <CreatorCard img={CreatorImg} id={2} name='Creator' />
           <CreatorCard img={CreatorImg} id={3} name='Creator' />

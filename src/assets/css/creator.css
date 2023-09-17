@@ -44,3 +44,9 @@
         transform: translateX(50%);
     }
 }
+
+@media (max-width: 768px) {
+    .creator-card{
+        margin-bottom: 2rem;
+    }
+}
