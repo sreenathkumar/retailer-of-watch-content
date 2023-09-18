@@ -4,8 +4,8 @@ import '../assets/css/footer.css'
 
 export default function Footer() {
     return (
-        <footer className='footer container pt-24 pb-10 px-6 mx-auto bg-gray-200'>
-            <div className='flex justify-between'>
+        <footer className='footer max-w-screen-xl pt-24 pb-10 px-6 mx-auto bg-gray-200'>
+            <div className='footer-container flex flex-wrap justify-between'>
                 <div className='brand-info'>
                     <div className='flex flex-col gap-6 mb-14'>
                         <img className='w-12' src={Logo} alt="logo" />
@@ -13,7 +13,7 @@ export default function Footer() {
                     </div>
                     <span className='text-xs'>copyright@2023. All right preserved</span>
                 </div>
-                <div className='flex flex-col justify-between'>
+                <div className='footer-links h-auto flex flex-col justify-between'>
                     <div className='flex gap-6 mb-14'>
                         <ul>
                             <li>Terms</li>
