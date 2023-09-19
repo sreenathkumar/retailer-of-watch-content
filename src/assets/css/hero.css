@@ -21,13 +21,15 @@
 }
 
 .icon-box-icon svg {
-   border: 1px solid black;
-   border-radius: 50%;
    width: 24px;
    height: 24px;
    padding: 16px;
    box-sizing: content-box;
 }
+.hero-bottom-wrapper .icon-box:nth-child(2) .icon-box-icon svg, .hero-bottom-wrapper .icon-box:nth-child(3) .icon-box-icon svg{
+   border-radius: 30% !important;
+}
+
 @media (max-width: 768px) {
    .hero{
       padding-top: 75px;
