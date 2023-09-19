@@ -67,7 +67,7 @@ export default function Hero() {
   return (
     <div className='hero container relative h-screen overflow-hidden w-full mx-auto px-6 flex flex-col justify-between' ref={hero}>
       <div className="hero-main md:flex md:justify-between md:grow md:h-full">
-        <div className="hero-texts w-1/2 bg-white flex flex-col justify-center items-start md:ml-10">
+        <div className="hero-texts w-1/2 bg-white flex flex-col justify-center items-start ">
           <h1 id='hero-heading-1'>Welcome</h1>
           <h1 id='hero-heading-2' className='mb-4'>to <span className='text-blue-600'>RLikes</span></h1>
           <p id='hero-des' className='mb-6'>Digital Retailer of Content<br />

@@ -1,6 +1,9 @@
 .play-btn .btn {
    transform: translate(-2px, -2px);
 }
+.products-headings h1{
+   font-size: 2rem;
+}
 .product-card{
    min-width: 13rem;
 }

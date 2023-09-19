@@ -4,6 +4,9 @@
 #hero-bottom{
    bottom: 5%;
 }
+.hero-texts{
+   padding: 0px 5%;
+}
 .hero-texts h1 {
    font-size: 2.5rem;
    font-weight: 700;

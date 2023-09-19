@@ -2,6 +2,7 @@ import { gsap } from 'gsap';
 import { useLayoutEffect, useRef } from 'react';
 import '../assets/css/products.css';
 import ProductItem from './ui/ProductItem';
+import { getRandomInt } from '../utils/getRandomNumber';
 
 export default function Products() {
    const product = useRef(null);
@@ -90,27 +91,21 @@ export default function Products() {
 
 
    return (
-      <div id='product-section' className='container px-6 pb-16 mx-auto' >
+      <div id='product-section' className='max-w-screen-xl px-6 pb-16 mx-auto' >
          <div className="products-headings text-center mb-10">
-            <h1 className='text-3xl font-semibold'>Over 5000+ products</h1>
-            <h2 className='text-3xl font-semibold'>available <span className='text-blue-600'>to check</span></h2>
+            <h1 className='font-bold'>Over 5000+ products</h1>
+            <h1 className='font-bold'>available <span className='text-blue-600'>to check</span></h1>
          </div>
          <div className="product-card-container overflow-x-scroll flex flex-col gap-4" ref={product}>
             <div className="product-row-1 flex gap-4">
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
+               {
+                  [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => <ProductItem key={index} img={`img-${getRandomInt(1, 8)}.png`} />)
+               }
             </div>
             <div className="product-row-2 flex gap-4">
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
-               <ProductItem></ProductItem>
+               {
+                  [1, 2, 3, 4, 5, 6, 7, 8].map((item, index) => <ProductItem key={index} img={`img-${getRandomInt(1, 8)}.png`} />)
+               }
             </div>
          </div>
       </div>
