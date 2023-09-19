@@ -1,4 +1,3 @@
-
 #bg-svg .bg-svg-cls-1,
 .wave{
     fill:none;
@@ -25,7 +24,6 @@
     transform: translateY(-48px);
 }
 
-
 #wave {
     width: 200%;
     position: absolute;
@@ -35,7 +33,7 @@
     animation: wave 9s linear infinite;
 }
 
-
+/* wave animation */
 @keyframes wave {
     0% {
         transform: translateX(0px);

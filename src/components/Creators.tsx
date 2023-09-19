@@ -172,8 +172,8 @@ export default function Creators() {
       </div>
       <div className="contents">
         <div className='flex flex-col items-center z-20 mb-24 -translate-y-10 relative'>
-          <span className='text-3xl font-semibold'>Enjoy listening to endless</span>
-          <span className='text-3xl font-semibold mb-10'>stories with your creators</span>
+          <span className='text-3xl font-bold text-h'>Enjoy listening to endless</span>
+          <span className='text-3xl font-bold mb-10 text-h'>stories with your creators</span>
         </div>
         <div className='flex flex-wrap justify-around z-20 relative'>
           <CreatorCard img={CreatorImg} id={1} name='Creator' />
