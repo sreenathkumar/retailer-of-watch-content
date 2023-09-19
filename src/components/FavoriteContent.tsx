@@ -58,8 +58,8 @@ export default function FavoriteContent() {
         <AnimatedSvg id='fav-bg' numberOfCircles={40} duration={7} width={svgWidth} position='fav-pos' strokeWidth={1} />
         <div className='relative z-10'>
           <div className='flex flex-col items-center z-20 relative'>
-            <span className='text-3xl font-semibold'>Choose your <span className='text-blue-600'>favorite</span></span>
-            <span className='text-3xl font-semibold mb-10'><span className='text-blue-600' >content</span> genre</span>
+            <span className='font-bold text-h'>Choose your <span className='text-blue-600'>favorite</span></span>
+            <span className='font-bold mb-10 text-h'><span className='text-blue-600' >content</span> genre</span>
           </div>
           <div>
 

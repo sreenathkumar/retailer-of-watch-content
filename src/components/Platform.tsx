@@ -46,7 +46,7 @@ export default function Platform() {
     return (
         <div id='platform-section' className='max-w-screen-xl px-6 py-28 mx-auto overflow-hidden' ref={platfrm}>
             <div id='platform-texts' className="flex flex-col items-center max-w-md mx-auto ">
-                <h2 className='text-3xl font-bold mb-6 .text-h'>The best platform</h2>
+                <h2 className='font-bold mb-6 text-h'>The best platform</h2>
                 <span className='platform-des text-sm text-center font-semibold mb-10'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dicta hic ut voluptas provident earum reiciendis id? Dolor optio excepturi non unde, quisquam saepe delectus iure cupiditate ea perferendis. Architecto, voluptatum.</span>
             </div>
             <div className="cards flex flex-col gap-6">
