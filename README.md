@@ -35,6 +35,6 @@ Contributions and feedback are welcome. Please feel free to open issues or submi
 
 ## Connect with Me
 
-If you have any questions or would like to discuss this project further, you can find me on [LinkedIn]([https://www.linkedin.com/in/your-name](https://www.linkedin.com/in/sreenathkumar/)) or [visit my portfolio]([mailto:your.email@example.com](https://sreenathkumar.github.io/portfolio/)).
+If you have any questions or would like to discuss this project further, you can find me on [LinkedIn](https://www.linkedin.com/in/sreenathkumar/) or [visit my portfolio](https://sreenathkumar.github.io/portfolio/).
 
 Thank you for exploring this Web Animation Showcase project, highlighting the capabilities of React, Tailwind CSS, TypeScript, and GSAP in creating captivating web animations.
