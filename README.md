@@ -1,6 +1,6 @@
 # SLikes
 
-Welcome to the SLikes! This repository is a demonstration of web animation expertise using React, Tailwind CSS, TypeScript, and GSAP.
+Welcome to the SLikes! This repository is a demonstration of web animation using React, Tailwind CSS, TypeScript, and GSAP.
 
 ## Key Features
 
