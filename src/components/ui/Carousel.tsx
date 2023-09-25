@@ -1,18 +1,10 @@
 import React from 'react'
-import TestmonialCard from './TestmonialCard'
 
-export default function Carousel() {
+export default function Carousel({ children, id = 'carousel', }: { children: React.ReactNode, id: string, }) {
     return (
-        <div id='carousel' className='overflow-hidden mx-auto py-16'>
-            <div className="carousel-inner flex gap-4 px-4">
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
-                <TestmonialCard />
+        <div id={id} className='overflow-hidden mx-auto py-16'>
+            <div className="carousel-inner w-fit flex gap-4 px-4">
+                {children}
             </div>
         </div>
     )
