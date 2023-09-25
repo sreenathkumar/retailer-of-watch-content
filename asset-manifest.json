@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/retailer-of-watch-content/static/css/main.babf3ace.css",
-    "main.js": "/retailer-of-watch-content/static/js/main.0d44bb25.js",
+    "main.css": "/retailer-of-watch-content/static/css/main.e3856e38.css",
+    "main.js": "/retailer-of-watch-content/static/js/main.427060c8.js",
     "static/media/frame_bg.webp": "/retailer-of-watch-content/static/media/frame_bg.2eb887985e84d403fd1c.webp",
     "static/media/product-card-image.webp": "/retailer-of-watch-content/static/media/product-card-image.69dfae18a45b457ede44.webp",
     "static/media/img-1.png": "/retailer-of-watch-content/static/media/img-1.b623fd7c00909f65f4a0.png",
@@ -18,11 +18,11 @@
     "static/media/video_timeline.webp": "/retailer-of-watch-content/static/media/video_timeline.56bb0e7a499ceef5818e.webp",
     "static/media/Asset 4.svg": "/retailer-of-watch-content/static/media/Asset 4.50f721299a9607476b97.svg",
     "index.html": "/retailer-of-watch-content/index.html",
-    "main.babf3ace.css.map": "/retailer-of-watch-content/static/css/main.babf3ace.css.map",
-    "main.0d44bb25.js.map": "/retailer-of-watch-content/static/js/main.0d44bb25.js.map"
+    "main.e3856e38.css.map": "/retailer-of-watch-content/static/css/main.e3856e38.css.map",
+    "main.427060c8.js.map": "/retailer-of-watch-content/static/js/main.427060c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.babf3ace.css",
-    "static/js/main.0d44bb25.js"
+    "static/css/main.e3856e38.css",
+    "static/js/main.427060c8.js"
   ]
 }
