@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import '../assets/css/header.css'
 import Menu from './ui/Menu'
-import Logo from '../assets/images/logo.png'
 
 export default function Header() {
   const [viewPort, setViewPort] = useState(window.innerWidth);
@@ -26,7 +25,7 @@ export default function Header() {
       <nav>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center">
-            <img src={Logo} className="h-8 mr-3" alt="Logo" />
+            <img src='/logo.svg' className="h-8 mr-3" alt="Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">SLikes</span>
           </a>
           <div className={`${viewPort < 768 && 'drawer'} w-full md:block md:w-auto`} id="navbar-menu">

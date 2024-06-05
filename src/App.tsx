@@ -21,7 +21,7 @@ function App() {
       <Creators />
       <Platform />
       <FavoriteContent />
-      <Testmonial />
+      <Testmonial carouselId='carousel' />
       <Footer />
     </>
   );

@@ -8,7 +8,7 @@ export default function Testmonial({ carouselId }: { carouselId: string }) {
     const [scrolledWidth, setScrolledWidth] = useState(0); // initially no scroll happened
     const [scrollableWidth, setScrollableWidth] = useState(0); // initially no scroll happened
     const [clickCount, setClickCount] = useState(0) //how many times carousel action button clicked
-    const [gap, setGap] = useState(16); // window width
+    const gap = 16 // window width
     const childWidth = (inner?.childNodes[0] as HTMLElement)?.offsetWidth; // width of each child
     const amountToScroll = childWidth + gap; // amount to scroll each time (child width + flex gap)
 

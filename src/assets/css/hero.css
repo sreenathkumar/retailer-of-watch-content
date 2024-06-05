@@ -42,7 +42,7 @@
    .hero-texts{
       width: auto;
       position: relative;
-      z-index: 20;
+      z-index: 9;
       margin: 48px auto;
       align-items: center;
       background: transparent;

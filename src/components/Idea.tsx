@@ -98,7 +98,7 @@ export default function Idea() {
    }, []);
 
    return (
-      <div id="idea-section" className='max-w-screen-xl mx-auto' ref={idea}>
+      <div id="idea-section" className='max-w-screen-2xl mx-auto' ref={idea}>
          <div className='idea-section-bg pt-32 pb-10 bg-gray-200 w-full p-6'>
             <div className="idea-wrapper flex">
                <div className='idea-image md:w-2/5 flex items-center justify-center relative'>
