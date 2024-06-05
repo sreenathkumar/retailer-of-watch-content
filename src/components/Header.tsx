@@ -25,7 +25,7 @@ export default function Header() {
       <nav>
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <a href="/" className="flex items-center">
-            <img src='/logo.svg' className="h-8 mr-3" alt="Logo" />
+            <img src='/retailer-of-watch-content/logo.svg' className="h-8 mr-3" alt="Logo" />
             <span className="self-center text-2xl font-semibold whitespace-nowrap text-black">SLikes</span>
           </a>
           <div className={`${viewPort < 768 && 'drawer'} w-full md:block md:w-auto`} id="navbar-menu">

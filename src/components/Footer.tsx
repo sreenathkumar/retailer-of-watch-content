@@ -7,7 +7,7 @@ export default function Footer() {
             <div className='footer-container flex flex-wrap justify-between'>
                 <div className='brand-info'>
                     <div className='flex flex-col gap-6 mb-14'>
-                        <img className='w-24' src='/logo.svg' alt="logo" />
+                        <img className='w-24' src='retailer-of-watch-content/logo.svg' alt="logo" />
                         <p className='brand-des text-sm'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nihil, doloremque.</p>
                     </div>
                     <span className='text-xs'>copyright@2023. All right preserved</span>
