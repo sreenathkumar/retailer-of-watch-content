@@ -2,12 +2,12 @@
    content: "How it works?";
 }
 
-#idea-section .image-container {
+.image-container {
    width: 384px;
    height: 550px;
    border-radius: 2.5rem;
 }
-#idea-section .image-wrapper {
+.image-wrapper {
    left: 50%;
    transform: translate(-50%, 0);
 }
@@ -37,4 +37,65 @@
 #idea-section .timeline img {
    width: 128px;
    height: 40px;
+}
+@media (max-width: 768px){
+   .idea-section-bg{
+      padding-top: 4rem;
+   }
+   .idea-wrapper{
+      flex-direction: column;
+      
+   }
+   .idea-image{
+      width: auto;
+      margin-bottom: 4rem;
+   }
+   #idea-section .image-wrapper{
+      position: relative;
+      left:0;
+      transform: none;
+      width: 100%;
+   }
+   .image-container{
+      width: 100%;
+      max-width: 300px;
+      max-height: 450px;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      margin: 0px auto;
+   }
+   #idea-section .play-button{
+      right: 0;
+      transform: translateX(35%) rotate(30deg);;
+   }
+   #idea-section .question{
+      width: 40%;
+      height: auto;
+      max-width: 128px;
+      right: 0;
+      transform: translateX(20%);
+   }
+   #idea-section .result{
+      width: 40%;
+      height: auto;
+      max-width: 96px;
+      right: 0;
+      transform: translateX(20%);
+   }
+   #idea-section .timeline{
+      width: 40%;
+      height: auto;
+      max-width: 128px;
+      transform: translateX(-5%);
+   }
+   .idea-texts{
+      width: auto;
+   }
+   
+}
+@media (max-width: 440px) {
+   #idea-section .text-container .heading {
+      font-size: 2.5rem;
+   }
 }

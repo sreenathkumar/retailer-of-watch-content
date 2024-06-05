@@ -1,0 +1,17 @@
+#carousel{
+    width: 928px;
+}
+#carousel .carousel-inner{
+    transition: 1s ease;
+}
+.hidden-carousel{
+    transform: scale(0.6);
+    transition: 0.5s ease-in-out;
+}
+.testmonial-card{
+    cursor: pointer;
+    transition: 1s ease;
+}
+.testmonial-card:hover{
+    transform: scale(1.1);
+}

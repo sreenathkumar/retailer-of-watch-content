@@ -1,0 +1,8 @@
+@media (max-width: 600px){
+    #platform-card-1, #platform-card-2, #platform-card-3,#platform-card-4{
+        width: 100%;
+    }
+    #platform-section .cards div{
+        flex-wrap: wrap;
+    }
+}

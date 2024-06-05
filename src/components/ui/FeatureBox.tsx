@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 interface FeatureBoxProps {
    title: string,
@@ -7,15 +7,15 @@ interface FeatureBoxProps {
 }
 
 export default function FeatureBox({ title, description, children }: FeatureBoxProps) {
+
    return (
-      <div className="feature-box flex">
+      <div className="feature-box flex flex-col justify-start gap-4">
          <div className="feature-box-icon">
             {children}
          </div>
-         <div className="icon-box-texts">
-            <h2 className='text-black font-bold'>{title}</h2>
-            <p className='text-gray-400'>{description}</p>
-         </div>
+         <h2 className='text-md text-black font-bold'>{title}</h2>
+         <p className='text-gray-400'>{description}</p>
+
       </div>
    )
 }

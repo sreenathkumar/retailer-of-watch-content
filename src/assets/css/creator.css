@@ -1,0 +1,50 @@
+#bg-svg .bg-svg-cls-1,
+.wave{
+    fill:none;
+    stroke:#b3b3b3;
+    stroke-width:  0.5px;
+}
+.bg-svg-cls-1{
+    opacity: 0.3;
+}
+#bg-svg .circle-2{fill:#1d4ed8;}
+#bg-svg .circle-3{fill:#0ea5e9;}
+#bg-svg .circle-4{fill:#6d28d9;}
+#bg-svg .circle-5{fill:#f97316;}
+#bg-svg .circle-6{fill:#ea580c;}
+
+#creator-1,#creator-2,#creator-3{
+    transform-origin: center;
+}
+
+#creator-3{
+    transform: translateY(-56px);
+}
+#creator-4{
+    transform: translateY(-48px);
+}
+
+#wave {
+    width: 200%;
+    position: absolute;
+    top: 50%;
+    right: 0%;
+    transform: translate(0%, -50%);
+    animation: wave 9s linear infinite;
+}
+
+/* wave animation */
+@keyframes wave {
+    0% {
+        transform: translateX(0px);
+    }
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+@media (max-width: 768px) {
+    .creator-card{
+        margin-bottom: 2rem;
+    }
+}
